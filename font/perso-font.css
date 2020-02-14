@@ -1,6 +1,6 @@
 
 @font-face {
   font-family: "Hello";
-  src: url("/hello/Hello.ttf") format("truetype"),
-    url("/hello/Hello.otf") format("opentype");
+  src: url("hello/Hello.ttf") format("truetype"),
+    url("hello/Hello.otf") format("opentype");
 }
