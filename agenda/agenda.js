@@ -74,30 +74,30 @@ Date.prototype.getMoisEnLettre = function() {
 
 
 jsConstruitAgenda = function(sListeEvent = "") {
-  let dJour							= new Date()
-  let dFin 							= new Date()
-  let sHtml 						= ""
-  let sHtmlNumJour 			= ""
-  let sHtmlEvent 				= ""
-  let nPremierMois			= 0
+  	let dJour				= new Date()
+  	let dFin 				= new Date()
+  	let sHtml 				= ""
+  	let sHtmlNumJour 			= ""
+  	let sHtmlEvent 				= ""
+  	let nPremierMois			= 0
 	let nMoisEnCours			= 0
-  const tabInitialeJour = ["L", "M", "M", "J", "V", "S", "D"]
-  let taEvent 					= []
+  	const tabInitialeJour = ["L", "M", "M", "J", "V", "S", "D"]
+  	let taEvent 				= []
 	let sCleEnCours				= ""
 	let moWidthEvent			= 0
-	let sLibEvent					= ""
+	let sLibEvent				= ""
 	let sCouleurEvent			= ""
-	let sFinPrec					= ""
+	let sFinPrec				= ""
 	let sMomentFinPrec			= ""
-	let sClassDeb					= ""
+	let sClassDeb				= ""
 
 
 
 	dJour.setHours(0, 0, 0, 0)
 
 
-  if (sListeEvent != "") {
-    const tabLigne = sListeEvent.split("\n")
+  	if (sListeEvent != "") {
+    		const tabLigne = sListeEvent.split("\n")
 
     for (let nLigne = 0; nLigne < tabLigne.length; nLigne++) {
       if (tabLigne[nLigne] != "") {
@@ -120,6 +120,7 @@ jsConstruitAgenda = function(sListeEvent = "") {
 						sMomentDeb: tabElem[1],
 						sMomentFin: tabElem[3],
 						sType: tabElem[4],
+		  				sPlace: tabElem[5]
 						sCouleur: "#666666",
 						taJour: []
           }
@@ -213,6 +214,13 @@ jsConstruitAgenda = function(sListeEvent = "") {
 				if (taEvent[sCleJour] != undefined) {
 					sCleEnCours 		= sCleJour
 					sLibEvent				= taEvent[sCleEnCours].sType
+					if (taEvent[sCleEnCours].sPlace != "" {
+					    	if (taEvent[sCleEnCours].sPlace == "0" {
+							sLibEvent			+= `<br>complet`
+						} else {
+							sLibEvent			+= `<br>${taEvent[sCleEnCours].sPlace} place(s) restante(s)`
+						}
+					    }
 					sCouleurEvent		= taEvent[sCleEnCours].sCouleur
 					sClassDeb				= " c-debut"
 					if (taEvent[sCleEnCours].sMomentDeb == "M") {
