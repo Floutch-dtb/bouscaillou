@@ -120,7 +120,7 @@ jsConstruitAgenda = function(sListeEvent = "") {
 						sMomentDeb: tabElem[1],
 						sMomentFin: tabElem[3],
 						sType: tabElem[4],
-		  				sPlace: tabElem[5]
+		  				sPlace: tabElem[5],
 						sCouleur: "#666666",
 						taJour: []
           }
