@@ -264,7 +264,7 @@ jsConstruitAgenda = function(sListeEvent = "") {
 }
 
 
-const fileUrl = './agenda.txt'
+const fileUrl = 'agenda.txt'
 fetch(fileUrl)
   .then(objResultat => objResultat.text())
   .then(sTexte => jsConstruitAgenda(sTexte))
