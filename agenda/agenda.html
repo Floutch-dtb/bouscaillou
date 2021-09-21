@@ -1,4 +1,20 @@
-<link href="https://floutch-dtb.github.io/bouscaillou/agenda/agenda.css" rel="stylesheet">
-<script src="https://floutch-dtb.github.io/bouscaillou/agenda/agenda.js"></script>
-<div id="i-agd-agenda">
-</div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Agenda</title>
+    <link href="agenda.css" rel="stylesheet">
+    <script src="agenda.js"></script>
+  </head>
+  <body>
+    <div id="i-agd-agenda">
+    </div>
+  </body>
+  <script>
+    const fileUrl = 'agenda.txt'
+    fetch(fileUrl)
+      .then(objResultat => objResultat.text())
+      .then(sTexte => document.getElementById("i-agd-agenda").innerHTML = jsConstruitAgenda(sTexte))
+  </script>  
+</html>
+
