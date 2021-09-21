@@ -1,0 +1,88 @@
+#i-agd-agenda * {
+	box-sizing: border-box;
+}
+
+.c-agd-mois {
+	margin-top: 20px;
+}
+
+.c-agd-semaine {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+	position: relative;
+}
+
+.c-agd-semaine.c-initiale {
+  background: #e0e0e0;
+	padding: 5px 0;
+	font-size: 0.8rem;
+}
+
+.c-agd-semaine.c-numero {
+  height: 12px;
+	border-top: solid 1px #d0d0d0;
+	padding-top: 2px;
+}
+
+.c-agd-semaine.c-event {
+	margin: 5px 0 10px 0;
+  height: 38px;
+}
+
+.c-agd-jour {
+  width: 14.2857142857%;
+  text-align: center;
+}
+
+.c-agd-jour.c-initiale {
+  color: #666666;
+	border-right: solid 1px #aaaaaa;
+}
+
+.c-agd-jour.c-initiale:last-child {
+	border: none;
+}
+
+.c-agd-jour.c-numero {
+  font-size: 0.7em;
+}
+
+.c-agd-jour.c-numero:not(:last-child) {
+	border-right: 1px solid #d0d0d0;
+}
+
+.c-agd-event {
+	height: 100%;
+	border: solid 2px #FFFFFF;
+	display: flex;
+	align-items: center;
+	padding: 0 5px;
+}
+
+.c-agd-event.c-vide {
+	width: 14.2857142857%;
+}
+
+.c-agd-event.c-demi-vide {
+	width: 7.14285714285%;
+}
+
+.c-agd-event.c-debut {
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+.c-agd-event.c-fin {
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.c-agd-libevent {
+	color: #FFFFFF;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	padding-bottom: 4px;
+}
+
