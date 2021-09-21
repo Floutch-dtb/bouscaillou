@@ -264,7 +264,7 @@ jsConstruitAgenda = function(sListeEvent = "") {
 }
 
 
-const fileUrl = 'agenda.txt'
+const fileUrl = 'https://floutch-dtb.github.io/bouscaillou/agenda/aganda.txt'
 fetch(fileUrl)
   .then(objResultat => objResultat.text())
   .then(sTexte => jsConstruitAgenda(sTexte))
