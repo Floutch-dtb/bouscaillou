@@ -7,36 +7,36 @@
 }
 
 .c-agd-semaine {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
 	position: relative;
 }
 
 .c-agd-semaine.c-initiale {
-  background: #e0e0e0;
+	background: #e0e0e0;
 	padding: 5px 0;
 	font-size: 0.8rem;
 }
 
 .c-agd-semaine.c-numero {
-  height: 12px;
+	height: 12px;
 	border-top: solid 1px #d0d0d0;
 	padding-top: 2px;
 }
 
 .c-agd-semaine.c-event {
 	margin: 5px 0 10px 0;
-  height: 38px;
+	height: 48px;
 }
 
 .c-agd-jour {
-  width: 14.2857142857%;
-  text-align: center;
+	width: 14.2857142857%;
+	text-align: center;
 }
 
 .c-agd-jour.c-initiale {
-  color: #666666;
+	color: #666666;
 	border-right: solid 1px #aaaaaa;
 }
 
@@ -45,7 +45,7 @@
 }
 
 .c-agd-jour.c-numero {
-  font-size: 0.7em;
+	font-size: 0.7em;
 }
 
 .c-agd-jour.c-numero:not(:last-child) {
