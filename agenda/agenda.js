@@ -259,12 +259,7 @@ jsConstruitAgenda = function(sListeEvent = "") {
     }
   }
 
-  document.getElementById("i-agd-agenda").innerHTML = sHtml
+  return sHtml
 
 }
 
-
-const fileUrl = 'https://floutch-dtb.github.io/bouscaillou/agenda/agenda.txt'
-fetch(fileUrl)
-  .then(objResultat => objResultat.text())
-  .then(sTexte => jsConstruitAgenda(sTexte))
