@@ -214,8 +214,8 @@ jsConstruitAgenda = function(sListeEvent = "") {
 				if (taEvent[sCleJour] != undefined) {
 					sCleEnCours 		= sCleJour
 					sLibEvent				= taEvent[sCleEnCours].sType
-					if (taEvent[sCleEnCours].sPlace != "" {
-					    	if (taEvent[sCleEnCours].sPlace == "0" {
+					if (taEvent[sCleEnCours].sPlace != "") {
+					    	if (taEvent[sCleEnCours].sPlace == "0") {
 							sLibEvent			+= `<br>complet`
 						} else {
 							sLibEvent			+= `<br>${taEvent[sCleEnCours].sPlace} place(s) restante(s)`
