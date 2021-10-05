@@ -46,6 +46,7 @@
 
 .c-agd-jour.c-numero {
 	font-size: 0.7em;
+	color: #666666;
 }
 
 .c-agd-jour.c-numero:not(:last-child) {
@@ -53,7 +54,7 @@
 }
 
 .c-agd-jour.c-passe {
-	color: #a0a0a0;
+	color: #c0c0c0;
 }
 
 .c-agd-event {
