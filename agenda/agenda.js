@@ -127,9 +127,11 @@ jsConstruitAgenda = function(sListeEvent = "") {
 					
 					switch (taEvent[sCle].sType) {
 						case "GITE"	:
+							taEvent[sCle].sType	= "Réservé"
 							taEvent[sCle].sCouleur	= "#FF385C"
 							break
 						case "VITALITE"	:
+							taEvent[sCle].sType	= "Cure de vitalité"
 							taEvent[sCle].sCouleur	= "#a6a155"
 							break
 					}
