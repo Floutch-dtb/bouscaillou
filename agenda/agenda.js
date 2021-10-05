@@ -258,6 +258,12 @@ jsConstruitAgenda = function(sListeEvent = "") {
 				}
 				
       } else {
+				if (sCleEnCours != "" && moWidthEvent != 0) {
+          sHtmlEvent += `<div class="c-agd-event${sClassDeb}" style="width: ${moWidthEvent}%; background: ${sCouleurEvent};"><div class="c-agd-libevent">${sLibEvent}</div></div>`
+          moWidthEvent = 0
+          sLibEvent = ""
+          sClassDeb = ""
+        }
         sHtmlEvent 			+= `<div class="c-agd-event c-vide"></div>`
       }
 
@@ -266,7 +272,7 @@ jsConstruitAgenda = function(sListeEvent = "") {
       if (dJour.getDay() == 0) {
         sHtmlNumJour		+= `</div>`
 				
-				if (sCleEnCours != "") {
+				if (sCleEnCours != "" && moWidthEvent != 0) {
 					sHtmlEvent 		+= `<div class="c-agd-event${sClassDeb}" style="width: ${moWidthEvent}%; background: ${sCouleurEvent};"><div class="c-agd-libevent">${sLibEvent}</div></div>`
 					moWidthEvent	= 0
 					sLibEvent			= ""
