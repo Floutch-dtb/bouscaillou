@@ -90,7 +90,8 @@ jsConstruitAgenda = function(sListeEvent = "") {
 	let sFinPrec				= ""
 	let sMomentFinPrec			= ""
 	let sClassDeb				= ""
-
+	let sClassNumJour 			= ""
+	let sNumJour 				= ""
 
 
 	dJour.setHours(0, 0, 0, 0)
@@ -192,11 +193,15 @@ jsConstruitAgenda = function(sListeEvent = "") {
         sHtmlEvent = `<div class="c-agd-semaine c-event">`
       }
 
-      sHtmlNumJour += `<div class="c-agd-jour c-numero">`
+      sNumJour = ""
+			sClassNumJour	= ""
 
       if (nMoisEnCours == dJour.getMonth()) {
         // le numéro du jour
-        sHtmlNumJour += dJour.getDate()
+				sNumJour = dJour.getDate()
+        if (dJour.getTime() < dAujourdhui.getTime()) {
+          sClassNumJour	= " c-passe"
+        }
 
         // Les évènements
 				if (sCleEnCours != "") {
@@ -251,13 +256,11 @@ jsConstruitAgenda = function(sListeEvent = "") {
 						}
 				}
 				
-				
       } else {
         sHtmlEvent 			+= `<div class="c-agd-event c-vide"></div>`
       }
 
-
-      sHtmlNumJour 		+= `</div>`
+			sHtmlNumJour += `<div class="c-agd-jour c-numero${sClassNumJour}">${sNumJour}</div>`
 
       if (dJour.getDay() == 0) {
         sHtmlNumJour		+= `</div>`
