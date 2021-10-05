@@ -76,6 +76,7 @@ Date.prototype.getMoisEnLettre = function() {
 jsConstruitAgenda = function(sListeEvent = "") {
   	let dJour				= new Date()
   	let dFin 				= new Date()
+	let dAujourdhui 			= new Date()
   	let sHtml 				= ""
   	let sHtmlNumJour 			= ""
   	let sHtmlEvent 				= ""
@@ -95,7 +96,7 @@ jsConstruitAgenda = function(sListeEvent = "") {
 
 
 	dJour.setHours(0, 0, 0, 0)
-
+	dAujourdhui.setHours(0, 0, 0, 0)
 
   	if (sListeEvent != "") {
     		const tabLigne = sListeEvent.split("\n")
