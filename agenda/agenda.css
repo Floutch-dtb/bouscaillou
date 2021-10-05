@@ -52,6 +52,10 @@
 	border-right: 1px solid #d0d0d0;
 }
 
+.c-agd-jour.c-passe {
+	color: #a0a0a0;
+}
+
 .c-agd-event {
 	height: 100%;
 	border: solid 2px #FFFFFF;
