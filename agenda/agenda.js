@@ -136,6 +136,10 @@ jsConstruitAgenda = function(sListeEvent = "") {
 							taEvent[sCle].sType	= "Cure de vitalité"
 							taEvent[sCle].sCouleur	= "#a6a155"
 							break
+						case "DETOX"	:
+							taEvent[sCle].sType	= "Cure de jeûne"
+							taEvent[sCle].sCouleur	= "#a6a155"
+							break
 						case "BLOQUE"	:
 							taEvent[sCle].sType	= "Bloqué"
 							taEvent[sCle].sCouleur	= "#666666"
