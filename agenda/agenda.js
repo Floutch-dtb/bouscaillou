@@ -123,9 +123,9 @@ jsConstruitAgenda = function(sListeEvent = "") {
 						sMomentFin: tabElem[3],
 						sType: tabElem[4],
 		  				sPlace: tabElem[5],
-						sCouleur: "#666666",
+						sCouleur: tabElem[6],
 						taJour: []
-          }
+          }			
 					
 					switch (taEvent[sCle].sType) {
 						case "GITE"	:
@@ -145,6 +145,11 @@ jsConstruitAgenda = function(sListeEvent = "") {
 							taEvent[sCle].sCouleur	= "#666666"
 							break
 					}
+					if (taEvent[sCle].sCouleur == "")
+					{
+						taEvent[sCle].sCouleur	= "#666666"
+					}
+					
         } else {
           taEvent[sCle].nNbEvent++
         }
@@ -234,7 +239,11 @@ jsConstruitAgenda = function(sListeEvent = "") {
 					    	if (taEvent[sCleEnCours].sPlace == "0") {
 							sLibEvent			+= `<br>complet`
 						} else {
-							sLibEvent			+= `<br>${taEvent[sCleEnCours].sPlace} place(s) restante(s)`
+							if (parseInt(taEvent[sCleEnCours].sPlace) > 0) {
+								sLibEvent			+= `<br>${taEvent[sCleEnCours].sPlace} place(s) restante(s)`
+							} else {
+								sLibEvent			+= `<br>${taEvent[sCleEnCours].sPlace}`
+							}
 						}
 					    }
 					sCouleurEvent		= taEvent[sCleEnCours].sCouleur
