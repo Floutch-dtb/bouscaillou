@@ -248,18 +248,32 @@ jsConstruitAgenda = function(sListeEvent = "") {
 					    }
 					sCouleurEvent		= taEvent[sCleEnCours].sCouleur
 					sClassDeb				= " c-debut"
-					if (taEvent[sCleEnCours].sMomentDeb == "M") {
-						if (taEvent[sCleEnCours].dDebut.getAAAAMMJJ() != taEvent[sCleEnCours].dFin.getAAAAMMJJ()) {
+					if (taEvent[sCleEnCours].dFin.getTime() != dJour.getTime()) {
+						if (taEvent[sCleEnCours].sMomentDeb == "M") {
 							moWidthEvent	+= 14.2857142857
-						}
-					} else {
-						if (sFinPrec != taEvent[sCleEnCours].dDebut.getAAAAMMJJ()) {
-							sHtmlEvent 	+= `<div class="c-agd-event c-demi-vide"></div>`
-						}
-						if (taEvent[sCleEnCours].dDebut.getAAAAMMJJ() != taEvent[sCleEnCours].dFin.getAAAAMMJJ()) {
+						} else {
+							if (sFinPrec != taEvent[sCleEnCours].dDebut.getAAAAMMJJ()) {
+								sHtmlEvent 	+= `<div class="c-agd-event c-demi-vide"></div>`
+							}
 							moWidthEvent	+= 7.14285714285
 						}
 					}
+					
+					if (taEvent[sCleEnCours].dFin.getTime() == dJour.getTime()) {
+						if (taEvent[sCleEnCours].sMomentFin == "A") {
+							moWidthEvent	+= 14.2857142857
+						} else {
+							moWidthEvent	+= 7.14285714285
+						}
+						sHtmlEvent 			+= `<div class="c-agd-event c-fin${sClassDeb}" style="width: ${moWidthEvent}%; background: ${sCouleurEvent};"><div class="c-agd-libevent">${sLibEvent}</div></div>`
+						sFinPrec				= taEvent[sCleEnCours].dFin.getAAAAMMJJ()
+						sMomentFinPrec	= taEvent[sCleEnCours].sMomentFin
+						sCleEnCours			= ""
+						sLibEvent				= ""
+						sCouleurEvent		= ""
+						moWidthEvent		= 0
+					}
+					
 				} else {
 						if (sCleEnCours == "") {
 							if (sFinPrec == dJour.getAAAAMMJJ()) {
