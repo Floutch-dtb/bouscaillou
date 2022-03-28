@@ -237,12 +237,12 @@ jsConstruitAgenda = function(sListeEvent = "") {
 					sLibEvent				= taEvent[sCleEnCours].sType
 					if (taEvent[sCleEnCours].sPlace != "") {
 					    	if (taEvent[sCleEnCours].sPlace == "0") {
-							sLibEvent			+= `<br>complet`
+							sLibEvent			+= `<br><span>complet</span>`
 						} else {
 							if (parseInt(taEvent[sCleEnCours].sPlace) > 0) {
-								sLibEvent			+= `<br>${taEvent[sCleEnCours].sPlace} place(s) restante(s)`
+								sLibEvent			+= `<br><span>${taEvent[sCleEnCours].sPlace} place(s) restante(s)</span>`
 							} else {
-								sLibEvent			+= `<br>${taEvent[sCleEnCours].sPlace}`
+								sLibEvent			+= `<br><span>${taEvent[sCleEnCours].sPlace}</span>`
 							}
 						}
 					    }
