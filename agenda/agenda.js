@@ -249,19 +249,23 @@ jsConstruitAgenda = function(sListeEvent = "") {
 					sCouleurEvent		= taEvent[sCleEnCours].sCouleur
 					sClassDeb				= " c-debut"
 					if (taEvent[sCleEnCours].sMomentDeb == "M") {
-						moWidthEvent	+= 14.2857142857
+						if (taEvent[sCleEnCours].dDebut.getAAAAMMJJ() != taEvent[sCleEnCours].dFin.getAAAAMMJJ()) {
+							moWidthEvent	+= 14.2857142857
+						}
 					} else {
 						if (sFinPrec != taEvent[sCleEnCours].dDebut.getAAAAMMJJ()) {
 							sHtmlEvent 	+= `<div class="c-agd-event c-demi-vide"></div>`
 						}
-						moWidthEvent	+= 7.14285714285
+						if (taEvent[sCleEnCours].dDebut.getAAAAMMJJ() != taEvent[sCleEnCours].dFin.getAAAAMMJJ()) {
+							moWidthEvent	+= 7.14285714285
+						}
 					}
 				} else {
 						if (sCleEnCours == "") {
 							if (sFinPrec == dJour.getAAAAMMJJ()) {
 								if (sMomentFinPrec == "M") {
 									sHtmlEvent 	+= `<div class="c-agd-event c-demi-vide"></div>`
-								}
+								} 
 							} else {
 								sHtmlEvent 	+= `<div class="c-agd-event c-vide"></div>`
 							}
