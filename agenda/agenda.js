@@ -145,7 +145,7 @@ jsConstruitAgenda = function(sListeEvent = "") {
 							taEvent[sCle].sCouleur	= "#666666"
 							break
 					}
-					if (taEvent[sCle].sCouleur == "")
+					if (taEvent[sCle].sCouleur == undefined)
 					{
 						taEvent[sCle].sCouleur	= "#666666"
 					}
