@@ -13,6 +13,6 @@
 20220609;A;20220612;A;Fertilité et création;Pour créer et réveiller ta fertilité;#deaa34
 20220628;A;20220630;M;GITE;
 20220701;A;20220703;M;GITE;
-20220609;A;20220612;M;Formation;Massage femme enceinte;#deaa34
+20220709;A;20220712;M;Formation;Massage femme enceinte;#deaa34
 20220801;A;20220807;M;GITE;
 20220808;A;20220814;M;GITE;
