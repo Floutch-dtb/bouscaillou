@@ -143,7 +143,7 @@ jsConstruitAgenda = function(sListeEvent = "") {
 							break
 						case "BLOQUE"	:
 							taEvent[sCle].sType	= "Bloqué"
-							taEvent[sCle].sCouleur	= "#666666"
+							taEvent[sCle].sCouleur	= "#999999"
 							break
 					}
 					if (taEvent[sCle].sCouleur == undefined)
