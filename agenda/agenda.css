@@ -63,6 +63,7 @@
 	display: flex;
 	align-items: center;
 	padding: 0 5px;
+	cursor: pointer;
 }
 
 .c-agd-event.c-vide {
