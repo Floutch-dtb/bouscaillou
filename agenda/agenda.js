@@ -228,7 +228,6 @@ jsConstruitAgenda = function(sListeEvent = "") {
 						sMomentFinPrec	= taEvent[sCleEnCours].sMomentFin
 						sCleEnCours			= ""
 						sLibEvent				= ""
-						sTitleEvent			= ""
 						sCouleurEvent		= ""
 						moWidthEvent		= 0
 					}
@@ -300,7 +299,6 @@ jsConstruitAgenda = function(sListeEvent = "") {
           sHtmlEvent += `<div class="c-agd-event${sClassDeb}" style="width: ${moWidthEvent}%; background: ${sCouleurEvent};" title="${sTitleEvent}"><div class="c-agd-libevent">${sLibEvent}</div></div>`
           moWidthEvent	= 0
           sLibEvent			= ""
-					sTitleEvent		= ""
           sClassDeb 		= ""
         }
         sHtmlEvent 			+= `<div class="c-agd-event c-vide"></div>`
