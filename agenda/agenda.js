@@ -74,25 +74,26 @@ Date.prototype.getMoisEnLettre = function() {
 
 
 jsConstruitAgenda = function(sListeEvent = "") {
-  	let dJour				= new Date()
-  	let dFin 				= new Date()
+  let dJour							= new Date()
+  let dFin 							= new Date()
 	let dAujourdhui 			= new Date()
-  	let sHtml 				= ""
-  	let sHtmlNumJour 			= ""
-  	let sHtmlEvent 				= ""
-  	let nPremierMois			= 0
+  let sHtml 						= ""
+  let sHtmlNumJour 			= ""
+  let sHtmlEvent 				= ""
+  let nPremierMois			= 0
 	let nMoisEnCours			= 0
-  	const tabInitialeJour = ["L", "M", "M", "J", "V", "S", "D"]
-  	let taEvent 				= []
+  const tabInitialeJour = ["L", "M", "M", "J", "V", "S", "D"]
+  let taEvent 					= []
 	let sCleEnCours				= ""
 	let moWidthEvent			= 0
-	let sLibEvent				= ""
+	let sLibEvent					= ""
+	let sTitleEvent				= ""
 	let sCouleurEvent			= ""
-	let sFinPrec				= ""
-	let sMomentFinPrec			= ""
-	let sClassDeb				= ""
-	let sClassNumJour 			= ""
-	let sNumJour 				= ""
+	let sFinPrec					= ""
+	let sMomentFinPrec		= ""
+	let sClassDeb					= ""
+	let sClassNumJour 		= ""
+	let sNumJour 					= ""
 
 
 	dJour.setHours(0, 0, 0, 0)
@@ -222,11 +223,12 @@ jsConstruitAgenda = function(sListeEvent = "") {
 						} else {
 							moWidthEvent	+= 7.14285714285
 						}
-						sHtmlEvent 			+= `<div class="c-agd-event c-fin${sClassDeb}" style="width: ${moWidthEvent}%; background: ${sCouleurEvent};" title="${sLibEvent}"><div class="c-agd-libevent">${sLibEvent}</div></div>`
+						sHtmlEvent 			+= `<div class="c-agd-event c-fin${sClassDeb}" style="width: ${moWidthEvent}%; background: ${sCouleurEvent};" title="${sTitleEvent}"><div class="c-agd-libevent">${sLibEvent}</div></div>`
 						sFinPrec				= taEvent[sCleEnCours].dFin.getAAAAMMJJ()
 						sMomentFinPrec	= taEvent[sCleEnCours].sMomentFin
 						sCleEnCours			= ""
 						sLibEvent				= ""
+						sTitleEvent			= ""
 						sCouleurEvent		= ""
 						moWidthEvent		= 0
 					}
@@ -236,14 +238,18 @@ jsConstruitAgenda = function(sListeEvent = "") {
 				if (taEvent[sCleJour] != undefined) {
 					sCleEnCours 		= sCleJour
 					sLibEvent				= taEvent[sCleEnCours].sType
+					sTitleEvent			= sLibEvent
 					if (taEvent[sCleEnCours].sPlace != "") {
 					    	if (taEvent[sCleEnCours].sPlace == "0") {
 							sLibEvent			+= `<br><span>complet</span>`
+							sTitleEvent		+= `\r\ncomplet`
 						} else {
 							if (parseInt(taEvent[sCleEnCours].sPlace) > 0) {
 								sLibEvent			+= `<br><span>${taEvent[sCleEnCours].sPlace} place(s) restante(s)</span>`
+								sTitleEvent		+= `\r\n${taEvent[sCleEnCours].sPlace} place(s) restante(s)`
 							} else {
 								sLibEvent			+= `<br><span>${taEvent[sCleEnCours].sPlace}</span>`
+								sTitleEvent		+= `\r\n${taEvent[sCleEnCours].sPlace}`
 							}
 						}
 					    }
@@ -291,10 +297,11 @@ jsConstruitAgenda = function(sListeEvent = "") {
 				
       } else {
 				if (sCleEnCours != "" && moWidthEvent != 0) {
-          sHtmlEvent += `<div class="c-agd-event${sClassDeb}" style="width: ${moWidthEvent}%; background: ${sCouleurEvent};"><div class="c-agd-libevent">${sLibEvent}</div></div>`
-          moWidthEvent = 0
-          sLibEvent = ""
-          sClassDeb = ""
+          sHtmlEvent += `<div class="c-agd-event${sClassDeb}" style="width: ${moWidthEvent}%; background: ${sCouleurEvent};" title="${sTitleEvent}"><div class="c-agd-libevent">${sLibEvent}</div></div>`
+          moWidthEvent	= 0
+          sLibEvent			= ""
+					sTitleEvent		= ""
+          sClassDeb 		= ""
         }
         sHtmlEvent 			+= `<div class="c-agd-event c-vide"></div>`
       }
@@ -305,13 +312,14 @@ jsConstruitAgenda = function(sListeEvent = "") {
         sHtmlNumJour		+= `</div>`
 				
 				if (sCleEnCours != "" && moWidthEvent != 0) {
-					sHtmlEvent 		+= `<div class="c-agd-event${sClassDeb}" style="width: ${moWidthEvent}%; background: ${sCouleurEvent};"><div class="c-agd-libevent">${sLibEvent}</div></div>`
+					sHtmlEvent 		+= `<div class="c-agd-event${sClassDeb}" style="width: ${moWidthEvent}%; background: ${sCouleurEvent};" title="${sTitleEvent}"><div class="c-agd-libevent">${sLibEvent}</div></div>`
 					moWidthEvent	= 0
 					sLibEvent			= ""
+					sTitleEvent		= ""
 					sClassDeb			= ""
 				}
 				sHtmlEvent			+= `</div>`
-        
+      	
 				sHtml						+= `${sHtmlNumJour}${sHtmlEvent}`
       }
 
