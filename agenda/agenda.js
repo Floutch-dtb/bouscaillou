@@ -272,7 +272,7 @@ jsConstruitAgenda = function(sListeEvent = "") {
 						} else {
 							moWidthEvent	+= 7.14285714285
 						}
-						sHtmlEvent 			+= `<div class="c-agd-event c-fin${sClassDeb}" style="width: ${moWidthEvent}%; background: ${sCouleurEvent};"><div class="c-agd-libevent">${sLibEvent}</div></div>`
+						sHtmlEvent 			+= `<div class="c-agd-event c-fin${sClassDeb}" style="width: ${moWidthEvent}%; background: ${sCouleurEvent}; title="${sTitleEvent}""><div class="c-agd-libevent">${sLibEvent}</div></div>`
 						sFinPrec				= taEvent[sCleEnCours].dFin.getAAAAMMJJ()
 						sMomentFinPrec	= taEvent[sCleEnCours].sMomentFin
 						sCleEnCours			= ""
