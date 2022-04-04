@@ -74,17 +74,23 @@ Date.prototype.getMoisEnLettre = function() {
 
 
 jsAfficheModal = function(sCleEvent = "") {
-	let objModal			= {};
-	let objModalInfo	= {};
+	let objModal			= {}
 	let sHtml 				= ""
+	let sHtmlLien			= ""
 	
+	
+	if (taEvent[sCleEvent].sLien != "") {
+		sHtmlLien	= `<br/><a href="${taEvent[sCleEvent].sLien}">En savoir plus...</a>`
+	}
 	
 	sHtml		= `
 		<p>${taEvent[sCleEvent].sType}</p>
+		<p>${taEvent[sCleEvent].sPlace}</p>
+		${sHtmlLien}
 	`
 	
-	objModalInfo	= document.getElementById("i-agd-modal-info")
-	objModalInfo.innerHTML	= sHtml
+	document.getElementById("i-agd-modal-info").innerHTML	= sHtml
+	document.getElementById("i-agd-modal-icon").style.color	= taEvent[sCleEvent].sCouleur
 	
 	objModal			= document.getElementById("i-agd-modal")
 	objModal.style.display = "block";
@@ -150,6 +156,7 @@ jsConstruitAgenda = function(sListeEvent = "") {
 						sType: tabElem[4],
 		  			sPlace: tabElem[5],
 						sCouleur: tabElem[6],
+						sLien: tabElem[7],
 						taJour: []
           }			
 					
@@ -357,14 +364,19 @@ jsConstruitAgenda = function(sListeEvent = "") {
   }
 
 	
-	sHtml		+= `<div id="i-agd-modal">
-								<div id="i-agd-modal-content">
-									<span id="i-agd-modal-btn-close" onclick="document.getElementById('i-agd-modal').style.display = 'none';">&times;</span>
-									<div id=i-agd-modal-info>
-										<p>Some text in the Modal..</p>
-									</div>
-								</div>
-							</div>`
+	sHtml		+= `
+		<div id="i-agd-modal">
+			<div id="i-agd-modal-content">
+				<span id="i-agd-modal-btn-close" onclick="document.getElementById('i-agd-modal').style.display = 'none';">&times;</span>
+				<div id="i-agd-modal-icon" class="material-icons">
+					event_note
+				</div>
+				<div id=i-agd-modal-info>
+				</div>
+			</div>
+		</div>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		`
 	
   return sHtml
 
