@@ -76,6 +76,12 @@ jsAfficheModal = function(sCleEvent = "") {
 	
 	objModal	= document.getElementById("i-agd-modal")
 	objModal.style.display = "block";
+	
+	window.onclick = function(event) {
+		if (event.target == objModal) {
+			objModal.style.display = "none";
+		}
+	}
 }
 
 
