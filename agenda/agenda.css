@@ -133,3 +133,11 @@
 #i-agd-modal-btn-close:hover, #i-agd-modal-btn-close:focus {
 	color: #2d2d2d;
 }
+
+#i-agd-modal-icon {
+	font-size: 3rem;
+}
+
+#i-agd-modal-info p:first-child {
+	font-size: 1.5rem !important;
+}
