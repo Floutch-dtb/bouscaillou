@@ -190,7 +190,7 @@ jsConstruitAgenda = function(sListeEvent = "") {
 			sClassInvisible	= " c-agd-invisible"
 		}
     sHtml += `<div class="c-agd-mois${sClassInvisible}">${dJour.getMoisEnLettre()} ${dJour.getFullYear()}</div>`
-    sHtml += `<div class="c-agd-semaine c-initiale">`
+    sHtml += `<div class="c-agd-semaine c-initiale${sClassInvisible}">`
     for (let nJour = 0; nJour < 7; nJour++) {
       sHtml += `<div class="c-agd-jour c-initiale">
 										${tabInitialeJour[nJour]}
@@ -209,8 +209,8 @@ jsConstruitAgenda = function(sListeEvent = "") {
 			const sCleJour	= dJour.getAAAAMMJJ()
 			
       if (dJour.getDay() == 1) {
-        sHtmlNumJour = `<div class="c-agd-semaine c-numero">`
-        sHtmlEvent = `<div class="c-agd-semaine c-event">`
+        sHtmlNumJour = `<div class="c-agd-semaine c-numero${sClassInvisible}">`
+        sHtmlEvent = `<div class="c-agd-semaine c-event${sClassInvisible}">`
       }
 
       sNumJour = ""
