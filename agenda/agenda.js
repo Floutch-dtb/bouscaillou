@@ -92,7 +92,7 @@ jsAfficheModal = function(sCleEvent = "") {
 	
 	sHtmlDate		= taEvent[sCleEvent].dDebut.toLocaleDateString()
 	if (taEvent[sCleEvent].dDebut.getAAAAMMJJ() != taEvent[sCleEvent].dFin.getAAAAMMJJ()) {
-		sHtmlDate	+= `- ${taEvent[sCleEvent].dFin.toLocaleDateString()}`
+		sHtmlDate	+= ` - ${taEvent[sCleEvent].dFin.toLocaleDateString()}`
 	}
 	
 	document.getElementById("i-agd-modal-info").innerHTML	= sHtml
