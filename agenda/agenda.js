@@ -187,7 +187,7 @@ jsConstruitAgenda = function(sListeEvent = "") {
 
 		sClassInvisible	= ""
 		if (nNumMois == nPremierMois) {
-			sClassInvisible	= "c-agd-invisible"
+			sClassInvisible	= " c-agd-invisible"
 		}
     sHtml += `<div class="c-agd-mois${sClassInvisible}">${dJour.getMoisEnLettre()} ${dJour.getFullYear()}</div>`
     sHtml += `<div class="c-agd-semaine c-initiale">`
