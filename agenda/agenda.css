@@ -99,3 +99,14 @@
 .c-agd-libevent span {
 	font-size: 0.9rem;
 }
+
+.c-agd-modal {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100vw;
+	height: 100vh;
+	backgroung-color: #00000088;
+	display: none;
+}
+
