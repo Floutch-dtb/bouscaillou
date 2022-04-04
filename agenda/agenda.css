@@ -106,8 +106,29 @@
 	left: 0px;
 	width: 100vw;
 	height: 100vh;
+	padding-top: 10%;
 	background-color: #00000088;
-	z-index: 2000;
+	z-index: 9999;
 	display: none;
 }
 
+#i-agd-modal-content {
+	background-color: #fffff;
+  	margin: auto;
+  	padding: 20px;
+  	border: 1px solid #888;
+	border-radius: 20px;
+  	width: 80%;
+}
+
+#i-agd-modal-btn-close {
+ 	color: #aaaaaa;
+ 	float: right;
+	font-size: 28px;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#i-agd-modal-btn-close:hover, #i-agd-modal-btn-close:focus {
+	color: #2d2d2d;
+}
