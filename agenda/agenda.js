@@ -77,6 +77,7 @@ jsAfficheModal = function(sCleEvent = "") {
 	let objModal			= {}
 	let sHtml 				= ""
 	let sHtmlLien			= ""
+	let sHtmlDate			= ""
 	
 	
 	if (taEvent[sCleEvent].sLien != "") {
@@ -89,8 +90,13 @@ jsAfficheModal = function(sCleEvent = "") {
 		${sHtmlLien}
 	`
 	
+	sHtmlDate		= taEvent[sCleEvent].dDebut.toLocaleDateString()
+	if (taEvent[sCleEvent].dDebut.getAAAAMMJJ() <> taEvent[sCleEvent].dFin.getAAAAMMJJ()) {
+		sHtmlDate	+= `- ${taEvent[sCleEvent].dFin.toLocaleDateString()}`
+	}
+	
 	document.getElementById("i-agd-modal-info").innerHTML	= sHtml
-	document.getElementById("i-agd-modal-date").innerHTML	= `${taEvent[sCleEvent].dDebut.getAAAAMMJJ()} - ${taEvent[sCleEvent].dFin.getAAAAMMJJ()}`
+	document.getElementById("i-agd-modal-date").innerHTML	= sHtmlDate
 	document.getElementById("i-agd-modal-icon").style.color	= taEvent[sCleEvent].sCouleur
 	
 	objModal			= document.getElementById("i-agd-modal")
