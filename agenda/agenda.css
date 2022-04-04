@@ -113,7 +113,7 @@
 }
 
 #i-agd-modal-content {
-	background-color: #fffff;
+	background-color: #ffffff;
   	margin: auto;
   	padding: 20px;
   	border: 1px solid #888;
@@ -126,6 +126,7 @@
  	float: right;
 	font-size: 28px;
 	font-weight: bold;
+	cursor: pointer;
 	font-family: Arial, Helvetica, sans-serif;
 }
 
