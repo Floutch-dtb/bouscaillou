@@ -3,7 +3,7 @@
 }
 
 .c-agd-invisible {
-	display: none;
+	display: none !important;
 }
 
 .c-agd-mois {
