@@ -348,7 +348,7 @@ jsConstruitAgenda = function(sListeEvent = "") {
 	
 	sHtml		+= `<div id="i-agd-modal">
 								<div id="i-agd-modal-content">
-									<span id="i-agd-modal-btn-close" onclick="document.getElementById('#i-agd-modal').style.display = 'none';">&times;</span>
+									<span id="i-agd-modal-btn-close" onclick="document.getElementById('i-agd-modal').style.display = 'none';">&times;</span>
 									<p>Some text in the Modal..</p>
 								</div>
 							</div>`
