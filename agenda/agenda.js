@@ -90,7 +90,7 @@ jsAfficheModal = function(sCleEvent = "") {
 	`
 	
 	document.getElementById("i-agd-modal-info").innerHTML	= sHtml
-	document.getElementById("i-agd-modal-date").innerHTML	= `${taEvent[sCleEvent].sType.dDebut.getAAAAMMJJ()} - ${taEvent[sCleEvent].dFin.getAAAAMMJJ()}`
+	document.getElementById("i-agd-modal-date").innerHTML	= `${taEvent[sCleEvent].dDebut.getAAAAMMJJ()} - ${taEvent[sCleEvent].dFin.getAAAAMMJJ()}`
 	document.getElementById("i-agd-modal-icon").style.color	= taEvent[sCleEvent].sCouleur
 	
 	objModal			= document.getElementById("i-agd-modal")
