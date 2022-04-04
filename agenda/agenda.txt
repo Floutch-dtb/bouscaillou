@@ -20,10 +20,10 @@
 20220701;A;20220703;M;GITE;
 20220708;A;20220712;A;Formation;Massage femme enceinte;#deaa34
 20220713;M;20220713;A;BLOQUE
-20220714;M;20220717;A;VITALITE;3 places restantes;
-20220718;A;20220723;A;JEUNE;4 places restantes;
+20220714;M;20220717;A;VITALITE;3 places restantes;;https://www.chaletdubouscaillou.fr/retraite-sejour-sante-vitalite.html
+20220718;A;20220723;A;JEUNE;4 places restantes;;https://www.chaletdubouscaillou.fr/sejour-cure-detox-naturo-jeune.html
 20220801;A;20220808;M;GITE;
 20220808;A;20220814;M;GITE;
-20220815;A;20220820;A;JEUNE;4 places restantes;
+20220815;A;20220820;A;JEUNE;4 places restantes;;https://www.chaletdubouscaillou.fr/sejour-cure-detox-naturo-jeune.html
 20220905;A;20220905;A;BLOQUE;
 20220906;M;20220906;A;Formation;Massage bébé;#deaa34
