@@ -71,6 +71,13 @@ Date.prototype.getMoisEnLettre = function() {
 }
 
 
+jsAfficheModal = function(sCleEvent = "") {
+	let objModal		= {};
+	
+	objModal	= getElementById("i-agd-modal")
+	objModal.style.display = "block";
+}
+
 
 
 jsConstruitAgenda = function(sListeEvent = "") {
@@ -124,7 +131,7 @@ jsConstruitAgenda = function(sListeEvent = "") {
 						sMomentDeb: tabElem[1],
 						sMomentFin: tabElem[3],
 						sType: tabElem[4],
-		  				sPlace: tabElem[5],
+		  			sPlace: tabElem[5],
 						sCouleur: tabElem[6],
 						taJour: []
           }			
@@ -189,7 +196,7 @@ jsConstruitAgenda = function(sListeEvent = "") {
 		if (nNumMois == nPremierMois) {
 			sClassInvisible	= " c-agd-invisible"
 		}
-    sHtml += `<div class="c-agd-mois${sClassInvisible}">${dJour.getMoisEnLettre()} ${dJour.getFullYear()}</div>`
+    sHtml += `<div class="c-agd-mois${sClassInvisible}" onclick="jsAfficheModal();">${dJour.getMoisEnLettre()} ${dJour.getFullYear()}</div>`
     sHtml += `<div class="c-agd-semaine c-initiale${sClassInvisible}">`
     for (let nJour = 0; nJour < 7; nJour++) {
       sHtml += `<div class="c-agd-jour c-initiale">
@@ -332,6 +339,9 @@ jsConstruitAgenda = function(sListeEvent = "") {
     }
   }
 
+	
+	sHtml		+= `<div id="i-agd-modal"></div>`
+	
   return sHtml
 
 }
