@@ -7,7 +7,7 @@
 20220424;A;20220426;M;GITE;
 20220429;A;20220501;M;GITE;
 20220501;A;20220503;M;GITE;
-20220509;A;20220509;A;BLOQUE;
+20220509;M;20220509;A;BLOQUE;
 20220510;M;20220510;A;Journée maman bébé;Un moment pour moi et mon bébé;ff5e4b;https://www.chaletdubouscaillou.fr/actualiteacutes/journee-maman-bebe
 20220511;M;20220516;M;JEUNE;3 places restantes;;https://www.chaletdubouscaillou.fr/sejour-cure-detox-naturo-jeune.html#i-prochaine-cure
 20220518;A;20220523;M;GITE;
