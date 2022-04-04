@@ -74,7 +74,7 @@ Date.prototype.getMoisEnLettre = function() {
 jsAfficheModal = function(sCleEvent = "") {
 	let objModal		= {};
 	
-	objModal	= getElementById("i-agd-modal")
+	objModal	= document.getElementById("i-agd-modal")
 	objModal.style.display = "block";
 }
 
