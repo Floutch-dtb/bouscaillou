@@ -1,3 +1,5 @@
+let taEvent 					= []
+
 
 Date.prototype.setCopieDe = function(dDate) {
   this.setTime(dDate.getTime())
@@ -72,9 +74,19 @@ Date.prototype.getMoisEnLettre = function() {
 
 
 jsAfficheModal = function(sCleEvent = "") {
-	let objModal		= {};
+	let objModal			= {};
+	let objModalInfo	= {};
+	let sHtml 				= ""
 	
-	objModal	= document.getElementById("i-agd-modal")
+	
+	sHtml		= `
+		<p>${taEvent[sCleEvent].sType}</p>
+	`
+	
+	objModalInfo	= document.getElementById("i-agd-modal-info")
+	objModalInfo.innerHTML	= sHtml
+	
+	objModal			= document.getElementById("i-agd-modal")
 	objModal.style.display = "block";
 	
 	window.onclick = function(event) {
@@ -96,7 +108,6 @@ jsConstruitAgenda = function(sListeEvent = "") {
   let nPremierMois			= 0
 	let nMoisEnCours			= 0
   const tabInitialeJour = ["L", "M", "M", "J", "V", "S", "D"]
-  let taEvent 					= []
 	let sCleEnCours				= ""
 	let moWidthEvent			= 0
 	let sLibEvent					= ""
@@ -202,7 +213,7 @@ jsConstruitAgenda = function(sListeEvent = "") {
 		if (nNumMois == nPremierMois) {
 			sClassInvisible	= " c-agd-invisible"
 		}
-    sHtml += `<div class="c-agd-mois${sClassInvisible}" onclick="jsAfficheModal();">${dJour.getMoisEnLettre()} ${dJour.getFullYear()}</div>`
+    sHtml += `<div class="c-agd-mois${sClassInvisible}">${dJour.getMoisEnLettre()} ${dJour.getFullYear()}</div>`
     sHtml += `<div class="c-agd-semaine c-initiale${sClassInvisible}">`
     for (let nJour = 0; nJour < 7; nJour++) {
       sHtml += `<div class="c-agd-jour c-initiale">
@@ -244,7 +255,7 @@ jsConstruitAgenda = function(sListeEvent = "") {
 						} else {
 							moWidthEvent	+= 7.14285714285
 						}
-						sHtmlEvent 			+= `<div class="c-agd-event c-fin${sClassDeb}" style="width: ${moWidthEvent}%; background: ${sCouleurEvent};" title="${sTitleEvent}"><div class="c-agd-libevent">${sLibEvent}</div></div>`
+						sHtmlEvent 			+= `<div class="c-agd-event c-fin${sClassDeb}" onclick="jsAfficheModal(${sCleEnCours});" style="width: ${moWidthEvent}%; background: ${sCouleurEvent};" title="${sTitleEvent}"><div class="c-agd-libevent">${sLibEvent}</div></div>`
 						sFinPrec				= taEvent[sCleEnCours].dFin.getAAAAMMJJ()
 						sMomentFinPrec	= taEvent[sCleEnCours].sMomentFin
 						sCleEnCours			= ""
@@ -292,7 +303,7 @@ jsConstruitAgenda = function(sListeEvent = "") {
 						} else {
 							moWidthEvent	+= 7.14285714285
 						}
-						sHtmlEvent 			+= `<div class="c-agd-event c-fin${sClassDeb}" style="width: ${moWidthEvent}%; background: ${sCouleurEvent};" title="${sTitleEvent}"><div class="c-agd-libevent">${sLibEvent}</div></div>`
+						sHtmlEvent 			+= `<div class="c-agd-event c-fin${sClassDeb}" onclick="jsAfficheModal(${sCleEnCours});" style="width: ${moWidthEvent}%; background: ${sCouleurEvent};" title="${sTitleEvent}"><div class="c-agd-libevent">${sLibEvent}</div></div>`
 						sFinPrec				= taEvent[sCleEnCours].dFin.getAAAAMMJJ()
 						sMomentFinPrec	= taEvent[sCleEnCours].sMomentFin
 						sCleEnCours			= ""
@@ -317,7 +328,7 @@ jsConstruitAgenda = function(sListeEvent = "") {
 				
       } else {
 				if (sCleEnCours != "" && moWidthEvent != 0) {
-          sHtmlEvent += `<div class="c-agd-event${sClassDeb}" style="width: ${moWidthEvent}%; background: ${sCouleurEvent};" title="${sTitleEvent}"><div class="c-agd-libevent">${sLibEvent}</div></div>`
+          sHtmlEvent += `<div class="c-agd-event${sClassDeb}" onclick="jsAfficheModal(${sCleEnCours});" style="width: ${moWidthEvent}%; background: ${sCouleurEvent};" title="${sTitleEvent}"><div class="c-agd-libevent">${sLibEvent}</div></div>`
           moWidthEvent	= 0
           sLibEvent			= ""
           sClassDeb 		= ""
@@ -331,7 +342,7 @@ jsConstruitAgenda = function(sListeEvent = "") {
         sHtmlNumJour		+= `</div>`
 				
 				if (sCleEnCours != "" && moWidthEvent != 0) {
-					sHtmlEvent 		+= `<div class="c-agd-event${sClassDeb}" style="width: ${moWidthEvent}%; background: ${sCouleurEvent};" title="${sTitleEvent}"><div class="c-agd-libevent">${sLibEvent}</div></div>`
+					sHtmlEvent 		+= `<div class="c-agd-event${sClassDeb}" onclick="jsAfficheModal(${sCleEnCours});" style="width: ${moWidthEvent}%; background: ${sCouleurEvent};" title="${sTitleEvent}"><div class="c-agd-libevent">${sLibEvent}</div></div>`
 					moWidthEvent	= 0
 					sLibEvent			= ""
 					sClassDeb			= ""
@@ -349,7 +360,9 @@ jsConstruitAgenda = function(sListeEvent = "") {
 	sHtml		+= `<div id="i-agd-modal">
 								<div id="i-agd-modal-content">
 									<span id="i-agd-modal-btn-close" onclick="document.getElementById('i-agd-modal').style.display = 'none';">&times;</span>
-									<p>Some text in the Modal..</p>
+									<div id=i-agd-modal-info>
+										<p>Some text in the Modal..</p>
+									</div>
 								</div>
 							</div>`
 	
