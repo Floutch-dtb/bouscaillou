@@ -160,6 +160,10 @@ jsConstruitAgenda = function(sListeEvent = "") {
 						taJour: []
           }			
 					
+					if (taEvent[sCle].sLien == undefined) {
+						taEvent[sCle].sLien		= ""
+					}
+					
 					switch (taEvent[sCle].sType) {
 						case "GITE"	:
 							taEvent[sCle].sType	= "Réservé"
