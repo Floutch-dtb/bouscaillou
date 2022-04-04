@@ -93,6 +93,7 @@ jsConstruitAgenda = function(sListeEvent = "") {
 	let sMomentFinPrec		= ""
 	let sClassDeb					= ""
 	let sClassNumJour 		= ""
+	let sClassInvisible		= ""
 	let sNumJour 					= ""
 
 
@@ -168,9 +169,12 @@ jsConstruitAgenda = function(sListeEvent = "") {
   }
 
 
-
   nPremierMois = dJour.getMonth()
-
+	nPremierMois--
+	if (nPremierMois == -1) {
+		nPremierMois	= 11
+	}
+	
   for (let nNumMois = nPremierMois; nNumMois < (nPremierMois + 12); nNumMois++) {
 
     nMoisEnCours = nNumMois
@@ -181,7 +185,11 @@ jsConstruitAgenda = function(sListeEvent = "") {
     }
     dJour.setMonth(nMoisEnCours)
 
-    sHtml += `<div class="c-agd-mois">${dJour.getMoisEnLettre()} ${dJour.getFullYear()}</div>`
+		sClassInvisible	= ""
+		if (nNumMois == nPremierMois) {
+			sClassInvisible	= "c-agd-invisible"
+		}
+    sHtml += `<div class="c-agd-mois${sClassInvisible}">${dJour.getMoisEnLettre()} ${dJour.getFullYear()}</div>`
     sHtml += `<div class="c-agd-semaine c-initiale">`
     for (let nJour = 0; nJour < 7; nJour++) {
       sHtml += `<div class="c-agd-jour c-initiale">
