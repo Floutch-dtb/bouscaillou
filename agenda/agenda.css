@@ -145,3 +145,10 @@
 #i-agd-modal-info p:first-child {
 	font-size: 1.5rem !important;
 }
+
+#i-agd-modal-date {
+	display: inline-block;
+	vertical-align: top;
+	padding: 0.8rem;
+	font-size: 1rem;
+}
