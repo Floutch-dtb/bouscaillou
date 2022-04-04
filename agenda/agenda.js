@@ -90,6 +90,7 @@ jsAfficheModal = function(sCleEvent = "") {
 	`
 	
 	document.getElementById("i-agd-modal-info").innerHTML	= sHtml
+	document.getElementById("i-agd-modal-date").innerHTML	= `${taEvent[sCleEvent].sType.dDebut.getAAAAMMJJ()} - ${taEvent[sCleEvent].dFin.getAAAAMMJJ()}`
 	document.getElementById("i-agd-modal-icon").style.color	= taEvent[sCleEvent].sCouleur
 	
 	objModal			= document.getElementById("i-agd-modal")
@@ -282,19 +283,9 @@ jsConstruitAgenda = function(sListeEvent = "") {
 					sLibEvent				= taEvent[sCleEnCours].sType
 					sTitleEvent			= sLibEvent
 					if (taEvent[sCleEnCours].sPlace != "") {
-					    	if (taEvent[sCleEnCours].sPlace == "0") {
-							sLibEvent			+= `<br><span>complet</span>`
-							sTitleEvent		+= `\r\ncomplet`
-						} else {
-							if (parseInt(taEvent[sCleEnCours].sPlace) > 0) {
-								sLibEvent			+= `<br><span>${taEvent[sCleEnCours].sPlace} place(s) restante(s)</span>`
-								sTitleEvent		+= `\r\n${taEvent[sCleEnCours].sPlace} place(s) restante(s)`
-							} else {
-								sLibEvent			+= `<br><span>${taEvent[sCleEnCours].sPlace}</span>`
-								sTitleEvent		+= `\r\n${taEvent[sCleEnCours].sPlace}`
-							}
-						}
-					    }
+						sLibEvent			+= `<br><span>${taEvent[sCleEnCours].sPlace}</span>`
+						sTitleEvent		+= `\r\n${taEvent[sCleEnCours].sPlace}`
+					}
 					sCouleurEvent		= taEvent[sCleEnCours].sCouleur
 					sClassDeb				= " c-debut"
 					if (taEvent[sCleEnCours].dFin.getTime() != dJour.getTime()) {
@@ -372,9 +363,11 @@ jsConstruitAgenda = function(sListeEvent = "") {
 		<div id="i-agd-modal">
 			<div id="i-agd-modal-content">
 				<span id="i-agd-modal-btn-close" onclick="document.getElementById('i-agd-modal').style.display = 'none';">&times;</span>
-				<div id="i-agd-modal-icon" class="material-icons">
+				<span id="i-agd-modal-icon" class="material-icons">
 					event_note
-				</div>
+				</span>
+				<span id="i-agd-modal-date">
+				</span>
 				<div id=i-agd-modal-info>
 				</div>
 			</div>
