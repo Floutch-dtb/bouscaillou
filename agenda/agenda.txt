@@ -27,3 +27,4 @@
 20220815;A;20220820;A;JEUNE;4 places restantes;;https://www.chaletdubouscaillou.fr/sejour-cure-detox-naturo-jeune.html
 20220905;A;20220905;A;BLOQUE;
 20220906;M;20220906;A;Formation;Massage bébé;#deaa34
+20220917;A;20220918;M;GITE;
