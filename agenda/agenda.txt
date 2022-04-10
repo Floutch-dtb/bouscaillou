@@ -1,6 +1,7 @@
 20220327;A;20220403;M;GITE;
 20220404;M;20220404;A;Journée maman bébé;Un moment pour moi et mon bébé;#ff5e4b;https://www.chaletdubouscaillou.fr/actualiteacutes/journee-maman-bebe
 20220405;M;20220405;A;Formation;Massage bébé;#deaa34
+20220410;A;20220414;M;GITE;
 20220416;A;20220418;M;GITE;
 20220418;A;20220421;M;GITE;
 20220421;A;20220424;M;GITE;
