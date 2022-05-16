@@ -1,12 +1,10 @@
-20220424;A;20220425;M;GITE;
-20220425;A;20220429;M;GITE;
 20220429;A;20220501;M;GITE;
 20220501;A;20220503;M;GITE;
 20220503;A;20220505;M;GITE;
 20220509;M;20220509;A;BLOQUE;
 20220510;M;20220510;A;Journée maman bébé;Un moment pour moi et mon bébé;#ff5e4b;https://www.chaletdubouscaillou.fr/actualiteacutes/journee-maman-bebe
 20220511;M;20220516;M;JEUNE;complet;;https://www.chaletdubouscaillou.fr/sejour-cure-detox-naturo-jeune.html#i-prochaine-cure
-20220518;A;20220523;M;GITE;
+20220517;A;20220523;M;GITE;
 20220523;A;20220526;M;GITE;
 20220526;A;20220529;M;GITE;
 20220602;A;20220605;M;GITE;
@@ -19,7 +17,7 @@
 20220708;A;20220712;A;Formation;Massage femme enceinte;#deaa34
 20220713;M;20220713;A;BLOQUE;
 20220714;M;20220717;A;VITALITE;3 places restantes;;https://www.chaletdubouscaillou.fr/retraite-sejour-sante-vitalite.html
-20220718;A;20220723;A;JEUNE;4 places restantes;;https://www.chaletdubouscaillou.fr/sejour-cure-detox-naturo-jeune.html
+20220718;A;20220723;A;JEUNE;3 places restantes;;https://www.chaletdubouscaillou.fr/sejour-cure-detox-naturo-jeune.html
 20220724;A;20220801;M;GITE;
 20220801;A;20220808;M;GITE;
 20220808;A;20220814;M;GITE;
