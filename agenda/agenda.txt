@@ -5,7 +5,7 @@
 20220624;A;20220626;M;GITE;
 20220628;A;20220630;M;GITE;
 20220701;A;20220703;M;GITE;
-20220708;A;20220712;A;Formation;Massage femme enceinte;#deaa34
+20220705;M;20220705;A;Journée maman bébé;Un moment pour moi et mon bébé;#ff5e4b;https://www.chaletdubouscaillou.fr/actualiteacutes/journee-maman-bebe
 20220713;M;20220713;A;BLOQUE;
 20220714;M;20220717;A;VITALITE;2 places restantes;;https://www.chaletdubouscaillou.fr/retraite-sejour-sante-vitalite.html
 20220718;A;20220723;A;JEUNE;3 places restantes;;https://www.chaletdubouscaillou.fr/sejour-cure-detox-naturo-jeune.html
