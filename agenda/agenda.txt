@@ -9,7 +9,6 @@
 20220709;A;20220713;M;GITE;
 20220713;A;20220713;A;BLOQUE;
 20220714;M;20220717;A;VITALITE;2 places restantes;;https://www.chaletdubouscaillou.fr/retraite-sejour-sante-vitalite.html
-20220718;A;20220723;A;JEUNE;3 places restantes;;https://www.chaletdubouscaillou.fr/sejour-cure-detox-naturo-jeune.html
 20220724;A;20220801;M;GITE;
 20220801;A;20220808;M;GITE;
 20220808;A;20220814;M;GITE;
