@@ -1,18 +1,7 @@
-20220526;A;20220529;M;GITE;
-20220602;A;20220605;M;GITE;
-20220606;A;20220606;A;BLOQUE;
-20220607;M;20220607;A;Journée maman bébé;Un moment pour moi et mon bébé;#ff5e4b;https://www.chaletdubouscaillou.fr/actualiteacutes/journee-maman-bebe
-20220624;A;20220626;M;GITE;
-20220628;A;20220630;M;GITE;
-20220701;A;20220703;M;GITE;
-20220705;M;20220705;A;Journée maman bébé;Un moment pour moi et mon bébé;#ff5e4b;https://www.chaletdubouscaillou.fr/actualiteacutes/journee-maman-bebe
-20220709;A;20220713;M;GITE;
-20220713;A;20220713;A;BLOQUE;
-20220714;M;20220717;A;VITALITE;2 places restantes;;https://www.chaletdubouscaillou.fr/retraite-sejour-sante-vitalite.html
 20220724;A;20220801;M;GITE;
 20220801;A;20220808;M;GITE;
 20220808;A;20220814;M;GITE;
-20220815;A;20220820;A;VITALITE;2 places restantes;;https://www.chaletdubouscaillou.fr/retraite-sejour-sante-vitalite.html
+20220815;A;20220820;A;VITALITE;;;https://www.chaletdubouscaillou.fr/retraite-sejour-sante-vitalite.html
 20220823;A;20220825;M;GITE;
 20220826;A;20220828;M;GITE;
 20220829;A;20220902;M;GITE;
