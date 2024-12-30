@@ -14,3 +14,4 @@
 20220930;A;20221002;M;GITE;
 20221016;A;20221021;A;JEUNE;1 place restante;;https://www.chaletdubouscaillou.fr/sejour-cure-detox-naturo-jeune.html
 20221024;A;20221029;A;JEUNE;3 places restantes;;https://www.chaletdubouscaillou.fr/sejour-cure-detox-naturo-jeune.html
+20250107;A;20250117;A;VITALITE;;;https://www.chaletdubouscaillou.fr/cure-de-vitalite/
